@@ -1,13 +1,21 @@
-<h1>All the cocktails we have</h1>
 
-  <% @cocktails.each do |cocktail|%>
-    <div class="card-category">
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      <%= cl_image_tag("a6cbezdcdrhkehgnqbem",
-      width: 400, height: 300, crop: :fill) %>
-   </div>
-  <% end %>
-<%= cl_image_tag("otq4kfwcyupg7xmv95mf",
-      width: 400, height: 300, crop: :fill) %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'download (2).jpeg' %>')">
+<h2>Hola Hola Welcome to the bar</h2>
+<p class="btn btn-warning"> <%= link_to "Add new cocktail?", new_cocktail_path %></p>
+</div>
 
-<%= link_to "Add new cocktail?", new_cocktail_path %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card_category" >
+          <div class="card-description">
+           <%= link_to cocktail.name, cocktail_path(cocktail) %>
+           <%= cl_image_tag cocktail.photo, height: 200, width: 200, crop: :fill %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
