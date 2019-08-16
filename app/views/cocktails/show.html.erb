@@ -1,0 +1,7 @@
+<h2> <%= @cocktail.name %></h2>
+<ul>
+  <% @doses.each  do |dose|%>
+    <li> we need <%= dose.description%> of: <%= dose.ingredient.name%>  <%= link_to "Delete?", dose_path(dose),method:"delete" , data: {confirm:"Nacera are you realy sure!!!!"}%></li>
+  <% end %>
+</ul>
+<%= link_to "Add new dose", new_cocktail_dose_path(@cocktail)%>
