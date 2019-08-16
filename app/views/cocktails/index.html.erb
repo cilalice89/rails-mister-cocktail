@@ -3,10 +3,11 @@
   <% @cocktails.each do |cocktail|%>
     <div class="card-category">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
-
+      <%= cl_image_tag("a6cbezdcdrhkehgnqbem",
+      width: 400, height: 300, crop: :fill) %>
    </div>
   <% end %>
-  <%= cl_image_tag("a6cbezdcdrhkehgnqbem",
+<%= cl_image_tag("otq4kfwcyupg7xmv95mf",
       width: 400, height: 300, crop: :fill) %>
 
 <%= link_to "Add new cocktail?", new_cocktail_path %>
