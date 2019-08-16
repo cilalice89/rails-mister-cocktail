@@ -4,19 +4,23 @@
    background-position: center;
    color: white;
    position: relative;
-   margin: 10px;
+   margin: 24px;
 
     }
 
 
- .card-description { position: absolute;}
-  // bottom: 10px;
+ .card-description {
+  // position: absolute;
+    // bottom: 10px;
   // left: 10px;
+
+}
 
  .card-description h2 {
   font-size: 30px; }
 
- .card-link { position: absolute;
+ .card-link {
+  // position: absolute;
   top: 0;
   bottom: 0;
   right: 0; width: 100%;
