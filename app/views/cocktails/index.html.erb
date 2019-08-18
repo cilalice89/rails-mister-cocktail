@@ -6,17 +6,21 @@
 
 <div class="container">
   <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card_category" >
-          <div class="card-description">
-           <%= link_to cocktail.name, cocktail_path(cocktail) %>
-           <%= cl_image_tag cocktail.photo, height: 180, width: 200, crop: :fill %>
+    <% if @cocktails.present? %>
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card_category" >
+            <div class="card-description">
+             <%= link_to cocktail.name, cocktail_path(cocktail) %>
+             <%= cl_image_tag cocktail.photo, height: 180, width: 200, crop: :fill %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
+    <% else %>
+      <%= No cocktails yet click-on to add one %>
     <% end %>
-  </div>
+    </div>
 </div>
 
 
